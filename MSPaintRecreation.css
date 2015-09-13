@@ -1,0 +1,27 @@
+h1
+{
+    text-align: center;
+    font-family: voltaire, sans-serif; /* imported from Adobe Edge Web Fonts */
+}
+#canvas1
+{
+    border: 5px solid #000000;
+    background-color: #FFFFFF;
+    background-image: url("http://fr.packshot-creator.com/sites/all/themes/basic/images/interface/grid.png");
+    float:right;
+}
+body
+{
+    background-color: #ABCDEF;
+}
+.toolkit
+{
+/*    position:relative; */
+    width:25%;
+    padding:1%;
+/*    top:10%; */
+    /*height:86%;*/
+    border-width:thin;
+    border-style:solid;
+    background-color:#BCD423;
+}

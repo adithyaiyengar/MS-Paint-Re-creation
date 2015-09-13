@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "./MSPaintRecreation.css">
+        <meta charset="utf-8" content="">
+        <script type = "text/javascript" src = "./MSPaintRecreation.js"></script>
+        <script src="http://use.edgefonts.net/voltaire.js"></script>
+        <title>Microsoft Paint Recreation</title>
+        <meta charset = "UTF-8">
+    </head>
+    <body> 
+        <header>
+            <div class="header">
+                <h1 style="text-align:center;">Microsoft Paint Recreation: Web Edition</h1>
+            </div>
+        </header>
+        <canvas id = "canvas1" onclick="finalDrawStuff(event);" width="500px" height="500px"></canvas>
+        <p onload="whiteBack();"> 
+            <a href="./abouttheauthors.html">About the Authors.</a>
+            <br/>
+            <a href="./instructions.html">Instructions</a>
+        </p>
+        <div class="toolkit" name="toolkit">
+            <h3 style = "text-align:left;">Toolkit</h3>
+            <input type = "button" onclick = "clearCanvas();" value = "Clear Canvas" /><br />
+            <input type = "button" onclick="saveImage();" value="Save Image"/>
+            <br/>
+            <p>Fill Type:</p>
+        <form>
+            <input type = "radio" value = "Empty" id="empty" name = "fillColor"/>Empty
+            <input type = "radio" value = "Filled" id="filled" name = "fillColor"/>Filled<br />
+        </form>
+            <p>Fill Color:</p>
+            <input type="color" id = "colorPref"/>
+            <input type = "button" onclick = "getColor()" value = "Submit Color" /><br />
+            <p>Pick a Brush Shape</p>
+            <select id="shapeChoose">
+                <option value = "--Choose a Shape--">--Choose a Shape--</option>
+                <option value = "Rectangle">Rectangle</option>
+                <option value = "Circle">Circle</option>
+                <option value = "Lines">Lines</option>
+            </select>
+            <form>
+                <p>Shape Draw Dimmensions</p>
+                <input type="number" placeholder="Width" id="xd"/>
+                <br/>
+                <input type="number" placeholder="Height" id="yd"/>
+                <br/>
+                <input type="number" placeholder="Circle Radius" id="rc"/>
+                <br/>
+                <input type="number" placeholder="Line Length" id="ll"/>
+                <br/>
+                <input type="number" placeholder="Angle CCw+X" id="ang"/>
+                <br/>
+                <input type="number" placeholder="Line Width" id="lw"/>
+            </form>
+            
+            <div id="containGrad">
+                <input type="button" id="startGrad" value="Chose A Gradient Fill Style" style="display:inline;" onclick="chooseStyleGrad()"/>
+                <input type="button" id="styleGrad1" name="noGrad" value="No Gradient" style="display:none;" onclick="ifNoneGrad()"/>
+                <br/>
+                <input type="button" id="styleGrad2" name="linearGrad" value="Linear Gradient" style="display:none;" onclick="ifLinearGrad()"/>
+                <br/>
+                <input type="button" id="styleGrad3" name="radialGrad" value="Radial Gradient" style="display:none;" onclick="ifRadialGrad()"/>
+                <form style="display:none;" id="linearGradOptions">
+                    <input type="number" id="x0l" placeholder="Starting x Coordinate"/>
+                    <input type="number" id="y0l" placeholder="Starting y Coordinate"/>
+                    <input type="number" id="x1l" placeholder="Ending x Coordinate"/>
+                    <input type="number" id="y1l" placeholder="Ending y Coordinate"/>
+                    <input type="button" id="submitGradOptions1" value="Submit Gradient Options" onclick="colorStopsGrad()"/>
+                </form>
+                <form style="display:none;" id="radialGradOptions">
+                    <input type="number" id="x0r" placeholder="Starting x Coordinate"/>
+                    <input type="number" id="y0r" placeholder="Starting y Coordinate"/>
+                    <input type="number" id="r0r" placeholder="Starting Circle Radius"/>
+                    <input type="number" id="x1r" placeholder="Ending x Coordinate"/>
+                    <input type="number" id="y1r" placeholder="Ending y Coordinate"/>
+                    <input type="number" id="r1r" placeholder="Ending Circle Radius"/>
+                    <input type="button" id="submitGradOptions2" value="Submit Gradient Options" onclick="colorStopsGrad()"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

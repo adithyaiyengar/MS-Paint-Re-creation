@@ -1,0 +1,18 @@
+h1
+{
+    font-family:bangers, sans-serif;
+    font-size:70px;
+}
+
+h2
+{
+    font-family:belgrano, sans-serif;
+    font-size:35px;
+}
+
+body
+{
+    font-family:belgrano, sans-serif;
+    font-size:20px;
+    background-image: url("http://fr.packshot-creator.com/sites/all/themes/basic/images/interface/grid.png");
+}
